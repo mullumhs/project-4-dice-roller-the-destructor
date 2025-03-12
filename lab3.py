@@ -11,24 +11,23 @@
 # Include a while loop and try/except blocks inside the function to handle non-integer inputs.
 def get_number(number):
     try:
-        number1 = int(number)
-        return(number1)
+        int(number)
+        return(number)
     except ValueError:
-         print("Incorrect parameter")
+         print("Value ERRORRR!!!")
 
     
 
 
 # Use the get_number function to ask for a numerator, then again for a denominator.
 # Divide the numerator by the denominator and print the result, handling any division by zero errors.
-def division(numerator, denominator):
-    num = get_number(numerator)
-    den = get_number(denominator)
+def division(numerator, denominator):  
+    
     try:
-        bob = num / den
+        bob = get_number(numerator) / get_number(denominator)
         print(bob)
     except ZeroDivisionError:
-        print("Incorrect parameters")
+        print("You can't divide by ZERO!!")
 
 
 
@@ -40,7 +39,7 @@ def list(index):
     try:
         print(list[index1])
     except IndexError:
-         print("Incorrect parameters")
+         print("Number isn't in the list")
 
 
 division(1, 3)
