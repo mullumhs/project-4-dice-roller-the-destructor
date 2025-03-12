@@ -12,7 +12,7 @@
 def get_number(number):
     try:
         int(number)
-        return(number)
+        return(int(number))
     except ValueError:
          print("Value ERRORRR!!!")
 
