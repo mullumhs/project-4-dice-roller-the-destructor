@@ -35,9 +35,8 @@ def division(numerator, denominator):
 # Print out the value from the list, handling the index error if the user selects a non-existent index.
 def list(index):
     list = "clear", "transparent", "shade", "black", "red", "linc_colour", "light"
-    index1 = get_number(index)
     try:
-        print(list[index1])
+        print(list[get_number(index)])
     except IndexError:
          print("Number isn't in the list")
 
