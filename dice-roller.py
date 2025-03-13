@@ -7,7 +7,7 @@
 - Description: Complete a functional dice roller app in Python
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 import random
-def get_number(number):
+def convert(number):
     try:
         int(number)
         return(int(number))
@@ -16,8 +16,8 @@ def get_number(number):
 
 def dice_roll():
     total = 0
-    for i in range(get_number(Count)):
-        rollval = random.randint(1, get_number(Type))
+    for i in range(convert(Count)):
+        rollval = random.randint(1, convert(Type))
         print(f"Spin {i+1}: {rollval}")
         total = total + rollval
 
