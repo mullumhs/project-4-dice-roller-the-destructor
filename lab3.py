@@ -9,14 +9,20 @@
 
 # Define a function called get_number(prompt) that returns an integer. 
 # Include a while loop and try/except blocks inside the function to handle non-integer inputs.
-def get_number(number):
+def convert_int(number):
     try:
         int(number)
         return(int(number))
     except ValueError:
          print("Value ERRORRR!!!")
 
-    
+def get_number():
+    while True:
+        bob = input("Enter a whole number: ")
+        try:
+            return(int(bob))
+        except ValueError:
+            print("Value ERRORRR!!!")
 
 
 # Use the get_number function to ask for a numerator, then again for a denominator.
@@ -24,7 +30,7 @@ def get_number(number):
 def division(numerator, denominator):  
     
     try:
-        bob = get_number(numerator) / get_number(denominator)
+        bob = convert_int(numerator) / convert_int(denominator)
         print(bob)
     except ZeroDivisionError:
         print("You can't divide by ZERO!!")
@@ -34,12 +40,12 @@ def division(numerator, denominator):
 # Use the get_number function to ask the user for an index to access an element from a predefined list. 
 # Print out the value from the list, handling the index error if the user selects a non-existent index.
 def list(index):
-    list = "clear", "transparent", "shade", "black", "red", "linc_colour", "light"
+    list = division(1, 1478), "transparent", "shade", "black", "red", "linc_colour", "light"
     try:
-        print(list[get_number(index)])
+        print(list[convert_int(index)])
     except IndexError:
          print("Number isn't in the list")
 
 
-division(1, 3)
-list(2)
+division(get_number(), get_number())
+list(get_number())

@@ -14,9 +14,6 @@ def get_number(number):
     except ValueError:
          print("Value ERRORRR!!!")
 
-Type = input("Side count of dice: ")
-Count = input("Amount of dice rolled: ")
-
 def dice_roll():
     total = 0
     for i in range(get_number(Count)):
@@ -25,4 +22,12 @@ def dice_roll():
         total = total + rollval
 
     print(f"Total of dice rolls == {total}")
-dice_roll()
+
+while True:
+    Type = input("Side count of dice: ")
+    Count = input("Amount of dice rolled: ")
+
+    dice_roll()
+    bob = input("Do you want to run again? Y/N: ")
+    if bob != "Y" and bob != "y":
+        break
