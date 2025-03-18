@@ -19,7 +19,7 @@ def get_number(type):
 
 def dice_roll():
     total = 0
-    for i in range(1, Count):
+    for i in range(Count):
         rollval = random.randint(1, Type)
         print(f"Spin {i+1}: {rollval}")
         total = total + rollval
